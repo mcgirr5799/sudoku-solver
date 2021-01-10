@@ -41,6 +41,7 @@ def possible(y,x,n):
     return True
 
 def solve():
+    #solving the puzzle via backtracking and recursion
     global sudokuboard
 
     for y in range(9):
@@ -50,8 +51,9 @@ def solve():
                     if (possible(y,x,n)):
                         sudokuboard[y][x] = n
                         solve()
-                        sudokuboard[y][x]
+                        sudokuboard[y][x] = 0
                 return
+
     print(np.matrix(sudokuboard))
 
 solve()
